@@ -25,15 +25,25 @@ const config: Config = {
       animation: {
         slideTop: 'slideTop 1s ease forwards',
         slideRight: 'slideRight 1s ease forwards',
+        slideLeft: 'slideLeft 1s ease forwards',
+        slideBottom: 'slideBottom 1s ease forwards',
       },
       keyframes: {
         slideTop: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(0)' },
+          '0%': { transform: 'translateY(-100%)'},
+          '100%': { transform: 'translateY(0)'},
         },
         slideRight: {
-          '0%': {transform: 'translateX(-100px)', opacity: '0'},
-          '100%': {transform: 'translateX(0px)', opacity: '1'},
+          '0%': {transform: 'translateX(100px)'},
+          '100%': {transform: 'translateX(0px)'},
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(-100%)'},
+          '100%': { transform: 'translateX(0px)'},
+        },
+        slideBottom: {
+          '0%': {transform: 'translateY(100px)'},
+          '100%': {transform: 'translateY(0px)'},
         },
       },
     },

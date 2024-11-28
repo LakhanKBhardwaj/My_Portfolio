@@ -12,7 +12,7 @@ export const Header : FC = () => {
     };
 
     return (
-        <nav className="bg-sky-950 p-3">
+        <nav className=" bg-slate-900 p-3">
             <div className=" px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center">
                     {/* Logo */}
