@@ -19,14 +19,14 @@ export const Header : FC = () => {
                     <div className="flex flex-1 items-center  justify-between ">
                         <Link href={"#"} className="flex shrink-0 items-center">
                             <Image src={myLogo} alt="My Logo" width={80} height={80} />
-                            <div className="relative ml-20 max-[720px]:hidden">
+                            <div className="relative ml-20 max-[820px]:hidden">
                                 <div className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 uppercase font-verdana text-[2em] font-extrabold text-[#f5f5f5] custom-text-shadow">
                                     Lakhan
                                 </div>
                             </div>
                         </Link>
                         {/* Desktop Menu */}
-                        <div className="hidden sm:ml-6 sm:block">
+                        <div className="hidden sm:ml-1 sm:block">
                             <div className="flex space-x-6">
                                 <Link href="/" className="border-2 border-customCyan px-3 py-2 text-lg font-medium text-white overflow-hidden flex justify-center items-center ease-out duration-700 rounded-3xl z-10 hover:border-transparent hover:shadow-customNavTabGlow">
                                     Home

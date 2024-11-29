@@ -27,6 +27,8 @@ const config: Config = {
         slideRight: 'slideRight 1s ease forwards',
         slideLeft: 'slideLeft 1s ease forwards',
         slideBottom: 'slideBottom 1s ease forwards',
+        border: 'border 4s linear infinite',
+
       },
       keyframes: {
         slideTop: {
@@ -45,6 +47,9 @@ const config: Config = {
           '0%': {transform: 'translateY(100px)'},
           '100%': {transform: 'translateY(0px)'},
         },
+        border: {
+          to: { '--border-angle': '360deg' },
+      }
       },
     },
   },
