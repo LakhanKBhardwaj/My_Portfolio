@@ -50,29 +50,17 @@ export const HomeContent: FC = () => {
 
             <div className='bg-slate-900 pt-32 px-5'>
                 <section className="flex justify-center  ">
-              
-                <div className="w-full  max-w-[422px] [background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] rounded-2xl border border-transparent animate-border">
-                  
-                    <div className="px-5 py-16  group">
-                    <Image src={BackImage} alt='Back Image'  className=' w-full ' />
-                        
+                    <div className="w-full  max-w-[422px] [background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] rounded-2xl border border-transparent animate-border">
+                        <div className="px-5 py-16  group">
+                            <Image src={BackImage} alt='Back Image' className=' w-full ' />
+                        </div>
                     </div>
-                </div>
-            </section>
-                {/* <div className="w-full max-w-[422px] [background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] rounded-2xl border border-transparent animate-border">
-                    
-                    <div className="px-5">
-                    <Image src={BackImage} alt='Back Image'  className=' w-full ' />
-                    </div>
-                </div> */}
+                </section>
             </div>
-
             {/* <div className='relative w-full h-[80%] group'>
                 <Image src={BackImage} alt='Back Image' width={550} className='absolute left-0 bottom-0 transform translate-x-[8%] transition-[bottom,left] duration-[2.5s] group-hover:bottom-[40px]' />
                 <Image src={MyPic} alt='My Pic' width={450} className='text-3xl absolute left-0 bottom-0 transform translate-x-8 transition-[bottom,left] duration-[2.5s] group-hover:left-[8%]' />
             </div> */}
-
-
         </div>
 
 
