@@ -28,28 +28,43 @@ const config: Config = {
         slideLeft: 'slideLeft 1s ease forwards',
         slideBottom: 'slideBottom 1s ease forwards',
         border: 'border 4s linear infinite',
+        loaderBorderAnimation1: 'spin 3s linear infinite',
+        loaderBorderAnimation2: 'spin 2s linear infinite',
+        loaderBorderAnimation3: 'spin 1.5s linear infinite',
 
       },
       keyframes: {
         slideTop: {
-          '0%': { transform: 'translateY(-100%)'},
-          '100%': { transform: 'translateY(0)'},
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
         },
         slideRight: {
-          '0%': {transform: 'translateX(100px)'},
-          '100%': {transform: 'translateX(0px)'},
+          '0%': { transform: 'translateX(100px)' },
+          '100%': { transform: 'translateX(0px)' },
         },
         slideLeft: {
-          '0%': { transform: 'translateX(-100%)'},
-          '100%': { transform: 'translateX(0px)'},
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0px)' },
         },
         slideBottom: {
-          '0%': {transform: 'translateY(100px)'},
-          '100%': {transform: 'translateY(0px)'},
+          '0%': { transform: 'translateY(100px)' },
+          '100%': { transform: 'translateY(0px)' },
         },
         border: {
           to: { '--border-angle': '360deg' },
-      }
+        },
+        loaderBorderAnimation1: {
+          '0%' : { transform: 'rotate(0deg)' },
+          '100%' : { transform:' rotate(360deg)' },
+        },
+        loaderBorderAnimation2: {
+          '0%' : { transform: 'rotate(0deg)' },
+          '100%' : { transform:' rotate(360deg)' },
+        },
+        loaderBorderAnimation3: {
+          '0%' : { transform: 'rotate(3600deg)' },
+          '100%' : { transform:' rotate(0deg)' },
+        }
       },
     },
   },

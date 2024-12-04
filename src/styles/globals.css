@@ -34,7 +34,8 @@
   --background-end-rgb: 255, 255, 255;
   --white-color: #FFF;
   --custom-cyan: #0ff;
-}
+  --green-400-rgba: rgba(74, 222, 130, 0.452);
+} 
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -50,5 +51,22 @@ body {
   font-family: "poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
+
+
+/* Initial state before the animation starts */
+.zoom-in-left {
+  opacity: 0;                /* Hidden initially */
+  transform: scale(0) translateX(-20px); /* Zoomed out and shifted left */
+  transition: all 0.7s ease-out; /* Smooth animation */
+}
+
+/* Final state when the element becomes visible */
+.zoom-in-left-visible {
+  opacity: 1;                /* Fully visible */
+  transform: scale(1) translateX(0); /* Zooms in and moves to its position */
+}
 
