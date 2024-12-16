@@ -20,6 +20,9 @@
       0.1667px 4.167px 5.833px rgba(16, 16, 16, 0.2),
       0.1667px 5px 10px rgba(16, 16, 16, 0.4);
   }
+  .transition-for-resumeButton {
+    transition: width 0.7s ease-in-out, height 0.7s ease-in-out, top 0.7s ease-in-out, left 0.7s ease-in-out;
+  }
 }
 
 @property --border-angle {
@@ -28,6 +31,8 @@
   syntax: '<angle>';
 }
 
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -35,6 +40,8 @@
   --white-color: #FFF;
   --custom-cyan: #0ff;
   --green-400-rgba: rgba(74, 222, 130, 0.452);
+  --custom-orange-rgb: rgb(255, 68, 33);
+  --yellow-400-rgb: rgb(250, 201, 21,);
 } 
 
 @media (prefers-color-scheme: dark) {
@@ -48,7 +55,7 @@
 
 body {
   height: 100vh;
-  font-family: "poppins", sans-serif;
+  font-family: 'Inconsolata', sans-serif;
 }
 
 html {

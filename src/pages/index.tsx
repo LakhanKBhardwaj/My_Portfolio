@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='scroll-smooth relative'>
+    <main className='bg-slate-900'>
       
       <Header />
       <HomeContent />

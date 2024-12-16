@@ -19,7 +19,9 @@ export const About : FC = () => {
       <div className="py-28 bg-slate-900 w-full h-80">
       <div className="text-white p-10  mx-auto ">
         <div data-aos="zoom-in-left" className=''>
-
+          <div className='border-l-[6px] bg-red-500 align-middle'>
+            <h1 className='max-sm:text-6xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold ml-2'>What I Do</h1>
+          </div>
         </div>
       </div>
       </div>

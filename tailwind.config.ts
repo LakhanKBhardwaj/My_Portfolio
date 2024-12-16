@@ -18,6 +18,7 @@ const config: Config = {
       },
       colors: {
         customCyan: 'var(--custom-cyan)',
+        customOragne: 'var(--custom-orange-rgb)',
       },
       boxShadow: {
         customNavTabGlow: '0 0 15px var(--custom-cyan), 0 0 30px var(--custom-cyan), 0 0 45px var(--custom-cyan)',
@@ -31,6 +32,8 @@ const config: Config = {
         loaderBorderAnimation1: 'spin 3s linear infinite',
         loaderBorderAnimation2: 'spin 2s linear infinite',
         loaderBorderAnimation3: 'spin 1.5s linear infinite',
+        explode: "explode 1s forwards",
+        desplode: "desplode 1s forwards",
 
       },
       keyframes: {
@@ -64,7 +67,15 @@ const config: Config = {
         loaderBorderAnimation3: {
           '0%' : { transform: 'rotate(3600deg)' },
           '100%' : { transform:' rotate(0deg)' },
-        }
+        },
+        explode: {
+          "0%": { width: "0px", height: "0px", marginLeft: "0px", marginTop: "0px", backgroundColor: "rgba(42, 53, 80,0.2)" },
+          "100%": { width: "400px", height: "400px", marginLeft: "-200px", marginTop: "-200px", backgroundColor: "rgba(250, 201, 21, 0.8)" },
+        },
+        desplode: {
+          "0%": { width: "400px", height: "400px", marginLeft: "-200px", marginTop: "-200px", backgroundColor: "rgba(250, 201, 21,0.8)" },
+          "100%": { width: "0px", height: "0px", marginLeft: "0px", marginTop: "0px", backgroundColor: "rgba(129, 80, 108,0.6)" },
+        },
       },
     },
   },
