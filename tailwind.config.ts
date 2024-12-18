@@ -29,9 +29,7 @@ const config: Config = {
         slideLeft: 'slideLeft 1s ease forwards',
         slideBottom: 'slideBottom 1s ease forwards',
         border: 'border 4s linear infinite',
-        loaderBorderAnimation1: 'spin 3s linear infinite',
-        loaderBorderAnimation2: 'spin 2s linear infinite',
-        loaderBorderAnimation3: 'spin 1.5s linear infinite',
+       
         explode: "explode 1s forwards",
         desplode: "desplode 1s forwards",
 
@@ -56,18 +54,7 @@ const config: Config = {
         border: {
           to: { '--border-angle': '360deg' },
         },
-        loaderBorderAnimation1: {
-          '0%' : { transform: 'rotate(0deg)' },
-          '100%' : { transform:' rotate(360deg)' },
-        },
-        loaderBorderAnimation2: {
-          '0%' : { transform: 'rotate(0deg)' },
-          '100%' : { transform:' rotate(360deg)' },
-        },
-        loaderBorderAnimation3: {
-          '0%' : { transform: 'rotate(3600deg)' },
-          '100%' : { transform:' rotate(0deg)' },
-        },
+       
         explode: {
           "0%": { width: "0px", height: "0px", marginLeft: "0px", marginTop: "0px", backgroundColor: "rgba(42, 53, 80,0.2)" },
           "100%": { width: "400px", height: "400px", marginLeft: "-200px", marginTop: "-200px", backgroundColor: "rgba(250, 201, 21, 0.8)" },
@@ -77,6 +64,17 @@ const config: Config = {
           "100%": { width: "0px", height: "0px", marginLeft: "0px", marginTop: "0px", backgroundColor: "rgba(129, 80, 108,0.6)" },
         },
       },
+      // animation: {
+      //   spin: "spin 2s linear infinite",
+      //   "spin-slow": "spin 3s linear infinite",
+      //   "spin-fast": "spin 1.5s linear infinite",
+      // },
+      // keyframes: {
+      //   spin: {
+      //     "0%": { transform: "rotate(0deg)" },
+      //     "100%": { transform: "rotate(360deg)" },
+      //   },
+      // },
     },
   },
   plugins: [],

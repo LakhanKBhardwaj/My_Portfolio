@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 
 
 
+
 export default function Home() {
   const [animateOut, setAnimateOut] = useState(false);
 
@@ -22,8 +23,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='bg-slate-900'>
-      
+    <main className='bg-slate-900 '>
+ 
       <Header />
       <HomeContent />
       <About />

@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app'
 import '@/styles/globals.css'
+import '@/styles/Preloaded.css'
 import { Preloader } from '@/components/Preloader'
+
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -21,7 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         <Component {...pageProps} />
       </div>
-      {/* <Component {...pageProps} /> */}
     </>
   )
 }
