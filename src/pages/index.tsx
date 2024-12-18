@@ -5,6 +5,7 @@ import { HomeContent } from '@/components/HomeContent'
 import { About } from '@/components/About'
 import { Preloader } from '@/components/Preloader'
 import { useEffect, useState } from 'react'
+import { Sidebar } from '@/components/Sidebar'
 
 
 
@@ -23,11 +24,13 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='bg-slate-900 '>
- 
-      <Header />
-      <HomeContent />
-      <About />
+    <main className='bg-slate-900 flex gap-6'>
+      <Sidebar />
+      {/* <Header /> */}
+      <div className='main-containt'>
+        <HomeContent />
+        <About />
+      </div>
     </main>
   )
 }

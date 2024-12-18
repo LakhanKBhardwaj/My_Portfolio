@@ -19,6 +19,8 @@ const config: Config = {
       colors: {
         customCyan: 'var(--custom-cyan)',
         customOragne: 'var(--custom-orange-rgb)',
+        mediumTealGreen: 'var(--medium-teal-green:)',
+        charcoal: 'rgba(41, 41, 41, 1)',
       },
       boxShadow: {
         customNavTabGlow: '0 0 15px var(--custom-cyan), 0 0 30px var(--custom-cyan), 0 0 45px var(--custom-cyan)',

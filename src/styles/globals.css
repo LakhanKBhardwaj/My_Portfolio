@@ -42,6 +42,9 @@
   --green-400-rgba: rgba(74, 222, 130, 0.452);
   --custom-orange-rgb: rgb(255, 68, 33);
   --yellow-400-rgb: rgb(250, 201, 21,);
+  --lightBlack: rgb(79, 79, 79);
+  --medium-teal-green: rgb(120, 171, 149);
+  --dark-gray: rgb(41, 41, 41);
 } 
 
 @media (prefers-color-scheme: dark) {

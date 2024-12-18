@@ -88,7 +88,7 @@ export const HomeContent: FC = () => {
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <span className="relative flex items-center justify-center gap-2 z-[10000]">
+                                <span className="relative flex items-center justify-center gap-2 ">
                                 <ResumeSvgIcons width='18px' height='18px' fill='var(--white-color)' />
                                     View Resume
                                 </span>
