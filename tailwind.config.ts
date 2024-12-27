@@ -19,11 +19,13 @@ const config: Config = {
       colors: {
         customCyan: 'var(--custom-cyan)',
         customOragne: 'var(--custom-orange-rgb)',
-        mediumTealGreen: 'var(--medium-teal-green:)',
+        mediumTealGreen: 'rgb(120, 171, 149)',
         charcoal: 'rgba(41, 41, 41, 1)',
+        whiteLowOpacity: 'rgba(255, 255, 255, 0.1)'
       },
       boxShadow: {
         customNavTabGlow: '0 0 15px var(--custom-cyan), 0 0 30px var(--custom-cyan), 0 0 45px var(--custom-cyan)',
+        headerBoxShadow : '0 0 24px 0 rgba(0, 0, 0, 0.08)'
       },
       animation: {
         slideTop: 'slideTop 1s ease forwards',
@@ -34,7 +36,13 @@ const config: Config = {
        
         explode: "explode 1s forwards",
         desplode: "desplode 1s forwards",
+        hireExplode: "hireExplode 0.7s forwards",
+        hireDesplode: "hireDesplode 0.7s forwards",
 
+      },
+      screens: {
+        'header-visibility': { min: '992px' }, // Custom breakpoint for min-width: 991px
+        'header-text': { max: '785px' }, // Custom breakpoint for max-width: 785pxpx
       },
       keyframes: {
         slideTop: {
@@ -64,6 +72,14 @@ const config: Config = {
         desplode: {
           "0%": { width: "400px", height: "400px", marginLeft: "-200px", marginTop: "-200px", backgroundColor: "rgba(250, 201, 21,0.8)" },
           "100%": { width: "0px", height: "0px", marginLeft: "0px", marginTop: "0px", backgroundColor: "rgba(129, 80, 108,0.6)" },
+        },
+        hireExplode: {
+          "0%": { width: "0px", height: "0px", marginLeft: "0px", marginTop: "0px", backgroundColor: "rgba(30, 41, 59, 0.8)" },
+          "100%": { width: "400px", height: "400px", marginLeft: "-200px", marginTop: "-200px", backgroundColor: "rgba(30, 41, 59, 1)" },
+        },
+        hireDesplode: {
+          "0%": { width: "400px", height: "400px", marginLeft: "-200px", marginTop: "-200px", backgroundColor: "rgba(30, 41, 59, 1)" },
+          "100%": { width: "0px", height: "0px", marginLeft: "0px", marginTop: "0px", backgroundColor: "rgba(30, 41, 59, 0.8)" },
         },
       },
       // animation: {

@@ -91,4 +91,29 @@ html {
 }
 
 
+/* Sider bar css */
+.sidebar{
+  transition: all 0.5s ease-in-out;
+}
 
+@media screen and (max-width:991px) {
+  .sidebar{
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -100%;
+  }
+}
+
+
+/* main content css style */
+.main-containt{
+  margin-left: 300px;
+  transition: margin-left 0.5s ease-in-out;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width:991px) {
+  .main-containt{
+    margin-left: 0px;
+  }
+}

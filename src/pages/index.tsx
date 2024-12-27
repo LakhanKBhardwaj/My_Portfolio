@@ -26,8 +26,8 @@ export default function Home() {
   return (
     <main className='bg-slate-900 flex gap-6'>
       <Sidebar />
-      {/* <Header /> */}
-      <div className='main-containt'>
+      <div className='main-containt w-full'>
+        <Header />
         <HomeContent />
         <About />
       </div>

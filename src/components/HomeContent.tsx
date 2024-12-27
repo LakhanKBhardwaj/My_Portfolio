@@ -58,9 +58,9 @@ export const HomeContent: FC = () => {
 
 
     return (
-        <section id={'home'}>
-            <div className="grid md:grid-cols-3 border-b-[1px] border-slate-600 md:h-screen md:py-32">
-                <div className='md:pt-16 pt-5 col-span-2'>
+        <section id={'home'} className='pt-16'>
+            <div className="grid md:grid-cols-3 border-b-[1px] border-slate-600 md:h-screen ">
+                <div className='col-span-2'>
                     <div className='sm:px-10 max-sm:px-5'>
                         <div className='py-2'>
                             <h3 className='max-sm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white font-bold animate-slideTop ' style={{ animationDelay: "1s" }}>Hello, It's Me</h3>

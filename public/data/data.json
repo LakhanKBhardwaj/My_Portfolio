@@ -1,0 +1,36 @@
+{
+    "menu": [
+        { "id": 1, "name": "Home", "path": "/", "icon": "ph-house" },
+        { "id": 2, "name": "About Me", "path": "/about", "icon": "ph-user" },
+        { "id": 3, "name": "Skills", "path": "/skills", "icon": "ph-code" },
+        { "id": 4, "name": "Projects", "path": "/projects", "icon": "ph-shopping-bag" },
+        { "id": 5, "name": "Resume", "path": "/resume", "icon": "ph-read-cv-logo" },
+        { "id": 6, "name": "Services", "path": "/services", "icon": "ph-briefcase" },
+        { "id": 7, "name": "Contact", "path": "/contact", "icon": "ph-envelope" }
+    ],
+
+    "socialMedia": [
+        {"id": 1, "name": "Facebook", "url": "https://facebook.com", "icon": "ph-facebook-logo"},
+        {"id": 2, "name": "Instagram", "url": "https://instagram.com", "icon": "ph-instagram-logo"},
+        {"id": 3, "name": "Linkedin", "url": "https://linkedin.com", "icon": "ph-linkedin-logo"},
+        {"id": 4, "name": "X", "url": "https://x.com", "icon": "ph-x-logo"}
+    ],
+
+    "icons": [
+        {
+          "id": 1,
+          "name": "Code",
+          "icon": "ph-code"
+        },
+        {
+          "id": 2,
+          "name": "Heart",
+          "icon": "ph-heart"
+        },
+        {
+          "id": 3,
+          "name": "Star",
+          "icon": "ph-star"
+        }
+      ]
+}
