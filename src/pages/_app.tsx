@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app'
 import '@/styles/globals.css'
 import '@/styles/Preloaded.css'
+import '@/styles/HomeContent.css';
 import { Preloader } from '@/components/Preloader'
 
 

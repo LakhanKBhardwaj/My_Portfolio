@@ -2,13 +2,16 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import { Typed } from 'react-typed';
 import Image from 'next/image';
 import BackImage from '../../public/Images/pattern.png';
-import MyPic from '../../public/Images/myPic.png';
+import MyPic from '../../public/Images/Lakhan1.png';
 import { ResumeSvgIcons } from '@/SvgIcons/svgIcons';
 import Link from 'next/link';
+import data from '../../public/data/data.json'
+
 
 export const HomeContent: FC = () => {
-
-
+    const [experienceCount, setExperienceCount] = useState(0);
+    const [projectCount, setProjectCount] = useState(0);
+    const experience = 3;
     const textRef = useRef<HTMLSpanElement>(null);
     const [circleStyle, setCircleStyle] = useState({});
     const [animationClass, setAnimationClass] = useState("");
@@ -43,12 +46,15 @@ export const HomeContent: FC = () => {
     useEffect(() => {
         if (textRef.current) {
             const typed = new Typed(textRef.current, {
-                strings: ["Frontend Developer", "Web Developer", "Computer Programmer"],
+                strings: ["Designer", "Developer", "Programmer"],
                 typeSpeed: 100,
                 backSpeed: 100,
                 backDelay: 1000,
                 loop: true,
+                autoInsertCss: true
             });
+
+
             return () => {
                 // Destroy the Typed instance when the component unmounts
                 typed.destroy();
@@ -56,61 +62,91 @@ export const HomeContent: FC = () => {
         }
     }, []);
 
+    useEffect(() => {
+        let experienceCount = 0;
+        const experienceInterval = setInterval(() => {
+            if (experienceCount < experience) {
+                experienceCount++;
+                setExperienceCount(experienceCount);
+            }
+        }, 500);
+        return () => clearInterval(experienceInterval);
+    }, []);
+
+    useEffect(() => {
+        let projectCount = 0;
+        const projectInterval = setInterval(() => {
+            if (projectCount < data.projects.length) {
+                projectCount++;
+                setProjectCount(projectCount);
+            }
+        }, 300); // Animates the count every 500ms
+
+        return () => clearInterval(projectInterval);
+    }, []);
+
+
 
     return (
-        <section id={'home'} className='pt-16'>
-            <div className="grid md:grid-cols-3 border-b-[1px] border-slate-600 md:h-screen ">
-                <div className='col-span-2'>
-                    <div className='sm:px-10 max-sm:px-5'>
+        <section id={'home'} className='pt-32 pb-16 border-b border-homeBorderColor overflow-hidden'>
+            <div className='container'>
+                <div className='flex flex-wrap gap-10 md:gap-14 items-center justify-between'>
+                    <div className='w-[478px] banner-content:w-full'>
+                        <span className='text-2xl md:text-3xl lg:text-4xl leading-[130%] text-white font-bold animate-slideTop ' style={{ animationDelay: "1s" }}>Hello, I'M</span>
+                        <h1 className='text-3xl sm:text-4xl leading-[130%] text-white font-bold  animate-slideLeft' style={{ animationDelay: "1s" }}>Lakhan Kumar Bhardwaj</h1>
+                        <h3 className='text-5xl sm:text-6xl md:text-7xl font-bold animate-slideBottom mt-2 mb-3' style={{ animationDelay: "1s" }}>
+                            <span className='text-2xl md:text-3xl lg:text-4xl  leading-[130%] text-white font-bold '> And I'm a FRONTEND</span><br />
+                            <span ref={textRef} className="text ml-2 text-mediumTealGreen"></span>
+                        </h3>
                         <div className='py-2'>
-                            <h3 className='max-sm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white font-bold animate-slideTop ' style={{ animationDelay: "1s" }}>Hello, It's Me</h3>
-                        </div>
-                        <div className='py-2'>
-                            <h1 className='max-sm:text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white animate-slideLeft' style={{ animationDelay: "1s" }}>Lakhan Kumar Bhardwaj</h1>
-                        </div>
-                        <div className='py-2'>
-                            <h3 className=' max-sm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white font-bold animate-slideBottom' style={{ animationDelay: "1s" }}>
-                                And I'm a
-                                <span ref={textRef} className="text ml-2 text-cyan-300"></span>
-                            </h3>
-                        </div>
-                        <div className='py-2'>
-                            <p className='animate-slideRight text-white text-2xl max-sm:text-lg' style={{ animationDelay: "1s" }}>I'm a Frontend Developer with over 3 years of experience,
-                                <br />proficient in HTML, CSS, SCSS, Tailwind CSS, JavaScript, React, and TypeScript..
+                            <p className='animate-slideRight text-white text-lg max-sm:text-lg' style={{ animationDelay: "1s" }}>I'm a Frontend Developer with over 3 years of experience,
+                                proficient in HTML, CSS, SCSS, Tailwind CSS, JavaScript, React, and TypeScript..
                             </p>
                         </div>
-                    </div>
-                    <div className='sm:px-28 max-sm:px-16 mt-12 flex flex-wrap items-center gap-3 md:gap-6 flex-col md:flex-row p-5'>
-                        <div className='overflow-hidden relative inline-block rounded-[50px] mb-3'>
-                            <span style={circleStyle} className={`bg-red-600 rounded-full absolute left-0 top-0 w-0 h-0 ml-0 mt-0 pointer-events-none duration-500 ${animationClass}`}></span>
-                            <a href="#"
-                                className="inline-block bg-customOragne text-white font-medium text-lg min-w-[120px] w-max text-center transition duration-700 no-underline px-7 py-4 z-[100000]"
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <span className="relative flex items-center justify-center gap-2 ">
-                                <ResumeSvgIcons width='18px' height='18px' fill='var(--white-color)' />
-                                    View Resume
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className='flex justify-center col-span-1 max-md:col-span-2'>
-                    <section className="sm:px-10 max-sm:px-5 max-md:py-5">
-                        <div className="w-full  max-w-[422px] [background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] rounded-2xl border border-transparent animate-border">
-                            <div className="px-5 py-16  group">
-                                <Image src={BackImage} alt='Back Image' className=' w-full ' />
+                        <div className=' flex flex-wrap items-center banner-content:items-start gap-3 md:gap-6 flex-col  mt-4 md:mt-8'>
+                            <div className='overflow-hidden relative inline-block rounded-[50px]'>
+                                <span style={circleStyle} className={`rounded-full absolute left-0 top-0 w-0 h-0 ml-0 mt-0 pointer-events-none duration-500 ${animationClass}`}></span>
+                                <a href="#"
+                                    className="inline-block bg-mediumTealGreen text-white font-medium text-lg min-w-[120px] w-max text-center transition duration-700 no-underline px-7 py-4 z-[100000]"
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <span className="relative flex items-center justify-center gap-2 ">
+                                        <ResumeSvgIcons width='18px' height='18px' fill='var(--white-color)' />
+                                        View Resume
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                    <div className='relative Profile-img:left-1/2 Profile-img:transform Profile-img:-translate-x-1/2'>
+                        <div className=' back-image rounded-2xl border border-transparent animate-border'>
+                            <Image src={BackImage} alt='Back Image' className='w-full animate-rotatedBg' />
+                            {/* <div className='w-full h-full bg-mediumTealGreen animate-rotatedBg'></div> */}
+                        </div>
+                        <div className='bg-white'>
+                            <Image src={MyPic} alt='Back Image' className='w-full h-full  absolute top-[-1px]' />
+                        </div>
+                    </div>
                 </div>
-                {/* <div className='relative w-full h-[80%] group'>
-                    <Image src={BackImage} alt='Back Image' width={550} className='absolute left-0 bottom-0 transform translate-x-[8%] transition-[bottom,left] duration-[2.5s] group-hover:bottom-[40px]' />
-                    <Image src={MyPic} alt='My Pic' width={450} className='text-3xl absolute left-0 bottom-0 transform translate-x-8 transition-[bottom,left] duration-[2.5s] group-hover:left-[8%]' />
-                </div> */}
+                <div className='w-[636px] flex flex-wrap xl:flex-nowrap items-center gap-3 md:gap-6 mt-10 md:mt-16'>
+                    <div className='flex items-center gap-2 xl:gap-4'>
+                        <h2 className='p-0 m-0 leading-[120%] block text-7xl text-mediumTealGreen font-semibold'> {experienceCount} </h2>
+                        <div className='w-[1px] h-10 bg-white'></div>
+                        <span className='text-white'>Year of Experience</span>
+                    </div>
+                    <div className='flex items-center gap-2 xl:gap-4'>
+                        <h2 className='p-0 m-0 leading-[120%] block text-7xl text-mediumTealGreen font-semibold'> {projectCount} </h2>
+                        <div className='w-[1px] h-10 bg-white'></div>
+                        <span className='text-white'>Projects Completed</span>
+                    </div>
+                    <div className='flex items-center gap-2 xl:gap-4 w-[194px] '>
+                        {/* <h2 className='p-0 m-0 leading-[120%] block text-7xl text-mediumTealGreen font-semibold'> {experienceCount} </h2>
+                        <div className='w-[1px] h-10 bg-white'></div>
+                        <span className='text-white'>Year of Experience</span> */}
+                    </div>
+                </div>
             </div>
-
         </section>
 
 

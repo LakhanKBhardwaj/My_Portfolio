@@ -112,8 +112,15 @@ html {
   overflow-x: hidden;
 }
 
+
 @media screen and (max-width:991px) {
   .main-containt{
     margin-left: 0px;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .container{
+    max-width: 1320px;
   }
 }
