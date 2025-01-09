@@ -21,14 +21,16 @@ const config: Config = {
         customOragne: 'var(--custom-orange-rgb)',
         mediumTealGreen: 'rgb(120, 171, 149)',
         charcoal: 'rgba(41, 41, 41, 1)',
-        whiteLowOpacity: 'rgba(255, 255, 255, 0.1)'
+        whiteLowOpacity: 'rgba(255, 255, 255, 0.1)',
+        white250: 'rgba(250, 250, 250, 1)'
       },
       boxShadow: {
         customNavTabGlow: '0 0 15px var(--custom-cyan), 0 0 30px var(--custom-cyan), 0 0 45px var(--custom-cyan)',
         headerBoxShadow : '0 0 24px 0 rgba(0, 0, 0, 0.08)'
       },
       borderColor: {
-        homeBorderColor: 'rgba(255, 255, 255, 0.1)'
+        homeBorderColor: 'rgba(255, 255, 255, 0.1)',
+        skillsBoxBorder: 'rgba(143, 143, 143, 0.25)'
       },
       container :{
         padding: 'calc(1.5rem * 0.5);',

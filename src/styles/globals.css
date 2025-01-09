@@ -38,6 +38,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --white-color: #FFF;
+  --white-250: 250, 250, 250;
   --custom-cyan: #0ff;
   --green-400-rgba: rgba(74, 222, 130, 0.452);
   --custom-orange-rgb: rgb(255, 68, 33);
@@ -109,7 +110,7 @@ html {
 .main-containt{
   margin-left: 300px;
   transition: margin-left 0.5s ease-in-out;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 

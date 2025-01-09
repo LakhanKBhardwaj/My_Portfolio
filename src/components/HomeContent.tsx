@@ -88,7 +88,7 @@ export const HomeContent: FC = () => {
 
 
     return (
-        <section id={'home'} className='pt-32 pb-16 border-b border-homeBorderColor overflow-hidden'>
+        <section id={'home'} className='pt-10 md:pt-12 lg:pt-32 pb-10 md:pb-8 lg:pb-16 border-b border-homeBorderColor overflow-hidden'>
             <div className='container'>
                 <div className='flex flex-wrap gap-10 md:gap-14 items-center justify-between'>
                     <div className='w-[478px] banner-content:w-full'>

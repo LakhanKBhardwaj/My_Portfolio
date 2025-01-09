@@ -28,5 +28,72 @@
     { "id": 3, "name": "Project 3", "description": "This is project 3." },
     { "id": 4, "name": "Project 4", "description": "This is project 4." },
     { "id": 5, "name": "Project 5", "description": "This is project 5." }
+  ],
+
+  "skills": [
+    {
+      "id": 1,
+      "icon1": "javascript.svg",
+      "icon2": "typescript.svg",
+      "title": "JavaScript & TypeScript",
+      "duration": 500,
+      "description": "Proficient in writing clean and efficient JavaScript code for web applications, with hands-on experience in building dynamic, interactive user interfaces."
+    },
+    {
+      "id": 2,
+      "icon1": "react.svg",
+      "icon2": "angular.svg",
+      "title": "React & Angular",
+      "duration": 600,
+      "description": "Experienced in building React-based web applications, utilizing modern concepts such as hooks, state management, and component-based architecture."
+    },
+    {
+      "id": 3,
+      "icon1": "nodejs.svg",
+      "icon2": "",
+      "title": "Node.js",
+      "duration": 700,
+      "description": "Skilled in backend development using Node.js, creating RESTful APIs and managing server-side functionality."
+    },
+    {
+      "id": 4,
+      "icon1": "html.svg",
+      "icon2": "css.svg",
+      "title": "HTML & CSS",
+      "duration": 800,
+      "description": "Well-versed in TypeScript, ensuring type safety and improving code maintainability in large-scale applications."
+    },
+    {
+      "id": 5,
+      "icon1": "bootstrap.svg",
+      "icon2": "",
+      "title": "BootStrap",
+      "duration": 500,
+      "description": "Well-versed in TypeScript, ensuring type safety and improving code maintainability in large-scale applications."
+    },
+    {
+      "id": 6,
+      "icon1": "tailwind-css.svg",
+      "icon2": "",
+      "title": "Tailwind CSS",
+      "duration": 600,
+      "description": "Well-versed in TypeScript, ensuring type safety and improving code maintainability in large-scale applications."
+    },
+    {
+      "id": 7,
+      "icon1": "mysql.svg",
+      "icon2": "",
+      "title": "MYSQL Database",
+      "duration": 700,
+      "description": "Well-versed in TypeScript, ensuring type safety and improving code maintainability in large-scale applications."
+    },
+    {
+      "id": 8,
+      "icon1": "laravel.svg",
+      "icon2": "",
+      "title": "Laravel",
+      "duration": 800,
+      "description": "Well-versed in TypeScript, ensuring type safety and improving code maintainability in large-scale applications."
+    }
   ]
 }
