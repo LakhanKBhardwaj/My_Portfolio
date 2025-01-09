@@ -1,12 +1,12 @@
 {
   "menu": [
-      { "id": 1, "name": "Home", "path": "/", "icon": "ph-house" },
-      { "id": 2, "name": "About Me", "path": "/about", "icon": "ph-user" },
-      { "id": 3, "name": "Skills", "path": "/skills", "icon": "ph-code" },
-      { "id": 4, "name": "Projects", "path": "/projects", "icon": "ph-shopping-bag" },
-      { "id": 5, "name": "Resume", "path": "/resume", "icon": "ph-read-cv-logo" },
-      { "id": 6, "name": "Services", "path": "/services", "icon": "ph-briefcase" },
-      { "id": 7, "name": "Contact", "path": "/contact", "icon": "ph-envelope" }
+     
+      { "id": 1, "name": "About Me", "path": "/", "icon": "ph-user" },
+      { "id": 2, "name": "Skills", "path": "#skills", "icon": "ph-code" },
+      { "id": 3, "name": "Projects", "path": "#projects", "icon": "ph-shopping-bag" },
+      { "id": 4, "name": "Services", "path": "#services", "icon": "ph-briefcase" },
+      { "id": 5, "name": "Resume", "path": "#resume", "icon": "ph-read-cv-logo" },
+      { "id": 6, "name": "Contact", "path": "#contact", "icon": "ph-envelope" }
   ],
 
   "socialMedia": [

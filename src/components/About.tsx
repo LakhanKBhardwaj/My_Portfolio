@@ -1,76 +1,147 @@
-import React, { FC, useEffect, useState } from 'react'
-import AOS from 'aos';
-import "aos/dist/aos.css";
+import React, { FC, useEffect, useRef, useState } from 'react';
+import { Typed } from 'react-typed';
 import Image from 'next/image';
-import SkillData from '../../public/data/data.json'
-import Icons from '../../public/svgImage/javascript.svg'
+import BackImage from '../../public/Images/pattern.png';
+import MyPic from '../../public/Images/Lakhan1.png';
+import { ResumeSvgIcons } from '@/SvgIcons/svgIcons';
+import data from '../../public/data/data.json'
 
 
 export const About: FC = () => {
+  const [experienceCount, setExperienceCount] = useState(0);
+  const [projectCount, setProjectCount] = useState(0);
+  const experience = 3;
+  const textRef = useRef<HTMLSpanElement>(null);
+  const [circleStyle, setCircleStyle] = useState({});
+  const [animationClass, setAnimationClass] = useState("");
 
-  const [skillsData, setSkillsData] = useState([]);
-  const [showFullText, setShowFullText] = useState(false);
+  const handleMouseEnter = (e: any) => {
+    const rect = e.target.getBoundingClientRect();
+    const relX = e.clientX - rect.left;
+    const relY = e.clientY - rect.top;
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out",
+    setCircleStyle({
+      left: `${relX}px`,
+      top: `${relY}px`,
     });
-  }, []);
+    setAnimationClass("animate-explode");
 
+    console.log(circleStyle);
+  };
 
-  const toggleText = () => {
-    setShowFullText(!showFullText);
+  const handleMouseLeave = (e: any) => {
+    const rect = e.target.getBoundingClientRect();
+    const relX = e.clientX - rect.left;
+    const relY = e.clientY - rect.top;
+
+    setCircleStyle({
+      left: `${relX}px`,
+      top: `${relY}px`,
+    });
+    setAnimationClass("animate-desplode");
   };
 
   useEffect(() => {
+    if (textRef.current) {
+      const typed = new Typed(textRef.current, {
+        strings: ["Designer", "Developer", "Programmer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true,
+        autoInsertCss: true
+      });
 
+      return () => {
+        // Destroy the Typed instance when the component unmounts
+        typed.destroy();
+      };
+    }
+  }, []);
+
+  useEffect(() => {
+    let experienceCount = 0;
+    const experienceInterval = setInterval(() => {
+      if (experienceCount < experience) {
+        experienceCount++;
+        setExperienceCount(experienceCount);
+      }
+    }, 500);
+    return () => clearInterval(experienceInterval);
+  }, []);
+
+  useEffect(() => {
+    let projectCount = 0;
+    const projectInterval = setInterval(() => {
+      if (projectCount < data.projects.length) {
+        projectCount++;
+        setProjectCount(projectCount);
+      }
+    }, 300); // Animates the count every 500ms
+
+    return () => clearInterval(projectInterval);
   }, []);
 
   return (
-    <>
-      <section id={'about'} className='pt-[50px] md:pt-[60px] lg:pt-[120px] pb-[50px] md:pb-[60px] lg:pb-[120px]'>
-        <div className='container'>
-          <div className='flex gap-3 flex-wrap xl:flex-nowrap justify-between items-end pb-10 sm:pb-8 lg:pb-16'>
-            <div data-aos="zoom-in" className='w-full xl:w-[75%]'>
-              <div className='flex items-center gap-2'>
-                <div className='w-1 h-10 sm:h-14 lg:h-16 bg-mediumTealGreen'></div>
-                <h1 className='text-4xl sm:text-5xl lg:text-[56px] font-semibold text-white ml-2'>What I Do</h1>
+    <section id={'about'} className='pt-10 md:pt-12 lg:pt-32 pb-10 md:pb-8 lg:pb-16 border-b border-homeBorderColor overflow-hidden'>
+      <div className='container'>
+        <div className='flex flex-wrap gap-10 md:gap-14 items-center justify-between'>
+          <div className='w-[478px] banner-content:w-full'>
+            <span className='text-2xl md:text-3xl lg:text-4xl leading-[130%] text-white font-bold animate-slideTop ' style={{ animationDelay: "1s" }}>Hello, I'M</span>
+            <h1 className='text-3xl sm:text-4xl leading-[130%] text-white font-bold  animate-slideLeft' style={{ animationDelay: "1s" }}>Lakhan Kumar Bhardwaj</h1>
+            <h3 className='text-5xl sm:text-6xl md:text-7xl font-bold animate-slideBottom mt-2 mb-3' style={{ animationDelay: "1s" }}>
+              <span className='text-2xl md:text-3xl lg:text-4xl  leading-[130%] text-white font-bold '> And I'm a FRONTEND</span><br />
+              <span ref={textRef} className="text ml-2 text-mediumTealGreen"></span>
+            </h3>
+            <div className='py-2'>
+              <p className='animate-slideRight text-white text-lg max-sm:text-lg' style={{ animationDelay: "1s" }}>I'm a Frontend Developer with over 3 years of experience,
+                proficient in HTML, CSS, SCSS, Tailwind CSS, JavaScript, React, and TypeScript..
+              </p>
+            </div>
+            <div className=' flex flex-wrap items-center banner-content:items-start gap-3 md:gap-6 flex-col  mt-4 md:mt-8'>
+              <div className='overflow-hidden relative inline-block rounded-[50px]'>
+                <span style={circleStyle} className={`rounded-full absolute left-0 top-0 w-0 h-0 ml-0 mt-0 pointer-events-none duration-500 ${animationClass}`}></span>
+                <a href="#"
+                  className="inline-block bg-mediumTealGreen text-white font-medium text-lg min-w-[120px] w-max text-center transition duration-700 no-underline px-7 py-4 z-[100000]"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <span className="relative flex items-center justify-center gap-2 ">
+                    <ResumeSvgIcons width='18px' height='18px' fill='var(--white-color)' />
+                    View Resume
+                  </span>
+                </a>
               </div>
-              <p className='text-base lg:text-lg text-white250 mt-2 lg:mt-4'>I have more than 10 years' experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my  online resume and project portfolio.</p>
             </div>
           </div>
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 lg:gap-8'>
-            {SkillData.skills.map((skill) => (
-              <div key={skill.id} data-aos='fade-up' data-aos-duration={skill.duration} className="rounded-sm ">
-                <div className='px-4 py-5 bg-slate-800 border-[1px] border-skillsBoxBorder transition-all'>
-                  <div className='flex items-center gap-5'>
-                  <Image src={`/svgImage/${skill.icon1}`} width={35} height={35} alt={skill.title} />
-                  {skill.icon2 && (
-                    <Image src={`/svgImage/${skill.icon2}`} width={35} height={35} alt={skill.title} />
-                  )}
-                  </div>
-                  <h4 className='text-base sm:text-lg lg:text-xl leading-[120%] font-medium mt-3 md:mt-6 mb-2 md:mb-3 text-white'>{skill.title}</h4>
-                  <p
-                    className={`text-base md:text-lg md:leading-[120%] text-white250 ${showFullText ? '' : 'sm:line-clamp-3'
-                      }`}
-                  >
-                    {skill.description}
-                  </p>
-                  <button
-                    onClick={toggleText}
-                    className="text-blue-400 hover:underline mt-2 hidden sm:block"
-                  >
-                    {showFullText ? 'See Less' : 'See More'}
-                  </button>
-                </div>
-              </div>
-            ))}
+          <div className='relative Profile-img:left-1/2 Profile-img:transform Profile-img:-translate-x-1/2'>
+            <div className=' back-image rounded-2xl border border-transparent animate-border'>
+              <Image src={BackImage} alt='Back Image' className='w-full animate-rotatedBg' />
+              {/* <div className='w-full h-full bg-mediumTealGreen animate-rotatedBg'></div> */}
+            </div>
+            <div className='bg-white'>
+              <Image src={MyPic} alt='Back Image' className='w-full h-full  absolute top-[-1px]' />
+            </div>
           </div>
         </div>
-      </section>
-    </>
-
+        <div className='w-[636px] flex flex-wrap xl:flex-nowrap items-center gap-3 md:gap-6 mt-10 md:mt-16'>
+          <div className='flex items-center gap-2 xl:gap-4'>
+            <h2 className='p-0 m-0 leading-[120%] block text-7xl text-mediumTealGreen font-semibold'> {experienceCount} </h2>
+            <div className='w-[1px] h-10 bg-white'></div>
+            <span className='text-white'>Year of Experience</span>
+          </div>
+          <div className='flex items-center gap-2 xl:gap-4'>
+            <h2 className='p-0 m-0 leading-[120%] block text-7xl text-mediumTealGreen font-semibold'> {projectCount} </h2>
+            <div className='w-[1px] h-10 bg-white'></div>
+            <span className='text-white'>Projects Completed</span>
+          </div>
+          <div className='flex items-center gap-2 xl:gap-4 w-[194px] '>
+            {/* <h2 className='p-0 m-0 leading-[120%] block text-7xl text-mediumTealGreen font-semibold'> {experienceCount} </h2>
+                <div className='w-[1px] h-10 bg-white'></div>
+                <span className='text-white'>Year of Experience</span> */}
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }

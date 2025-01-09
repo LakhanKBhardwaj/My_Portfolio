@@ -23,7 +23,7 @@ const iconMap = {
 
 export const Sidebar: FC = () => {
 
-    const [isActive, setIsActive] = useState("Home");
+    const [isActive, setIsActive] = useState("About Me");
 
     const handelActiveMenu = (menuName: any) => {
         setIsActive(menuName)
@@ -94,7 +94,7 @@ export const Sidebar: FC = () => {
                                     return (
                                         <li key={menu.id} className={`rounded-lg ${isActive === menu.name ? 'bg-mediumTealGreen' : 'hover:bg-mediumTealGreen'}`}>
                                             <Link
-                                                href={'#'}
+                                                href={menu.path}
                                                 onClick={() => handelActiveMenu(menu.name)}
                                                 className={`flex items-center gap-2 text-white text-[16px] leading-[130%] px-3 py-2`}
                                             >
