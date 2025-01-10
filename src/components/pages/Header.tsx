@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import { Briefcase, Code, Envelope, House, ShoppingBag, User } from '@phosphor-icons/react'
-import data from '../../public/data/data.json'
+import data from '../../../public/data/data.json'
 
 
 // Create a mapping of icon strings to icon components

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React, { FC, useRef, useState } from 'react'
-import MyPic from '../../public/Images/myImage2.png'
+import MyPic from '../../../public/Images/myImage2.png'
 import Link from 'next/link'
-import data from '../../public/data/data.json'
+import data from '../../../public/data/data.json'
 import { Briefcase, Code, Envelope, FacebookLogo, House, InstagramLogo, LinkedinLogo, PaperPlaneTilt, ReadCvLogo, ShoppingBag, User, XLogo, } from '@phosphor-icons/react'
 
 

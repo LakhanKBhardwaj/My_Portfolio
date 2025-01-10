@@ -1,10 +1,10 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { Typed } from 'react-typed';
 import Image from 'next/image';
-import BackImage from '../../public/Images/pattern.png';
-import MyPic from '../../public/Images/Lakhan1.png';
+import BackImage from '../../../public/Images/pattern.png';
+import MyPic from '../../../public/Images/Lakhan1.png';
 import { ResumeSvgIcons } from '@/SvgIcons/svgIcons';
-import data from '../../public/data/data.json'
+import data from '../../../public/data/data.json'
 
 
 export const About: FC = () => {
@@ -98,7 +98,7 @@ export const About: FC = () => {
                 proficient in HTML, CSS, SCSS, Tailwind CSS, JavaScript, React, and TypeScript..
               </p>
             </div>
-            <div className=' flex flex-wrap items-center banner-content:items-start gap-3 md:gap-6 flex-col  mt-4 md:mt-8'>
+            <div className=' flex flex-wrap items-start gap-3 md:gap-6 flex-col  mt-4 md:mt-8'>
               <div className='overflow-hidden relative inline-block rounded-[50px]'>
                 <span style={circleStyle} className={`rounded-full absolute left-0 top-0 w-0 h-0 ml-0 mt-0 pointer-events-none duration-500 ${animationClass}`}></span>
                 <a href="#"

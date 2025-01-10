@@ -1,8 +1,9 @@
 
-import { Header } from '@/components/Header'
-import { About } from '@/components/About'
-import { Sidebar } from '@/components/Sidebar'
-import { Skills } from '@/components/Skills'
+import { Header } from '@/components/pages/Header'
+import { About } from '@/components/pages/About'
+import { Sidebar } from '@/components/pages/Sidebar'
+import { Skills } from '@/components/pages/Skills'
+import { Projects } from '@/components/pages/Projects'
 
 
 
@@ -20,6 +21,7 @@ export default function Home() {
         {/* <HomeContent /> */}
         <About />
         <Skills />
+        <Projects />
       </div>
     </main>
   )
