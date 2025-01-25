@@ -54,7 +54,8 @@ const config: Config = {
         'header-visibility': { min: '992px' }, // Custom breakpoint for min-width: 991px
         'header-text': { max: '785px' }, // Custom breakpoint for max-width: 785pxpx
         'banner-content': {max: '1206px'},
-        'Profile-img': {max: '1206px'}
+        'Profile-img': {max: '1206px'},
+        'max-1070px': { max: '1070px' },
       },
       keyframes: {
         slideTop: {
