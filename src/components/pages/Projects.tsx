@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
-import TODOList from '../../../public/Images/ToDoList.png'
+import projectData from '../../../public/data/project.json'
+import { ArrowUpRight } from '@phosphor-icons/react'
+import { useRouter } from 'next/router';
+import Link from 'next/link'
+
 
 export const Projects: FC = () => {
+    const router = useRouter();
     return (
         <section id={'projects'} className='pt-[50px] md:pt-[60px] lg:pt-[120px] pb-[50px] md:pb-[60px] lg:pb-[120px]'>
             <div className='container'>
@@ -19,87 +24,29 @@ export const Projects: FC = () => {
                     
                 </div> */}
                 <div className="grid gap-4 lg:gap-8 sm:grid-cols-2  xl:grid-cols-3 max-w-7xl mx-auto ">
+                    {projectData.projects.map(project => (
+                        <div className='rounded-lg shadow-lg'>
+                            <div className='project-img relative'>
+                                <img src={project.screenshot} alt='TODOList' className='w-full h-[230px]' />
+                            </div>
+                            <div className="flex justify-between items-center pt-4 md:pt-8 px-3 md:px-6">
+                                <div>
+                                    <span className="text-xl font-semibold text-white hover:text-mediumTealGreen project-title">{project.name}</span>
+                                    <div className="flex flex-row">
+                                        <div className="flex [max-width:400px]:flex-wrap gap-2 mt-4 basis-128">
+                                            <span className="text-xs border text-white rounded-full px-3 py-1">{project.frontend}</span>
+                                            <span className="text-xs border text-white rounded-full px-3 py-1">{project.backend}</span>
+                                            <span className="text-xs border text-white rounded-full px-3 py-1">{project.database}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <Link href={{pathname: '/projectDetails',}}className='project-link flex items-center justify-center flex-shrink-0'>
+                                    <ArrowUpRight size={20} className='link-icon' />
+                                </Link>
                     
-                    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        {/* <Image src={"/project1-thumbnail.jpg"} width={50} alt={"Project 1"} className="w-full h-48 object-cover"> */}
-                        <div className='project-img relative'>
-                            <Image src={TODOList} alt='TODOList'/>
-                        </div>
-                        
-                        <div className="p-6">
-                            <h3 className="text-xl font-semibold text-white">To-do List Application</h3>
-                            <p className="text-gray-400 mt-2">Developed a feature-rich To-Do List application using React for the frontend, styled with Tailwind CSS, and MongoDB as the database to store tasks.</p>
-                            <div className="flex gap-2 mt-4">
-                                <span className="text-xs bg-blue-600 text-white rounded-full px-3 py-1">React</span>
-                                <span className="text-xs bg-green-600 text-white rounded-full px-3 py-1">Tailwind CSS</span>
-                            </div>
-                            <div className="mt-4 flex gap-4">
-                                <a href="https://project-live-link.com" target="_blank" className="text-blue-400 hover:underline">Live Demo</a>
-                                <a href="https://github.com/project-link" target="_blank" className="text-blue-400 hover:underline">GitHub</a>
                             </div>
                         </div>
-                    </div>
-                    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        {/* <Image src={"/project1-thumbnail.jpg"} width={50} alt={"Project 1"} className="w-full h-48 object-cover"> */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold text-white">Project Name</h3>
-                                <p className="text-gray-400 mt-2">A brief description of the project and its purpose.</p>
-                                <div className="flex gap-2 mt-4">
-                                    <span className="text-xs bg-blue-600 text-white rounded-full px-3 py-1">React</span>
-                                    <span className="text-xs bg-green-600 text-white rounded-full px-3 py-1">Tailwind CSS</span>
-                                </div>
-                                <div className="mt-4 flex gap-4">
-                                    <a href="https://project-live-link.com" target="_blank" className="text-blue-400 hover:underline">Live Demo</a>
-                                    <a href="https://github.com/project-link" target="_blank" className="text-blue-400 hover:underline">GitHub</a>
-                                </div>
-                            </div>
-                    </div>
-                    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        {/* <Image src={"/project1-thumbnail.jpg"} width={50} alt={"Project 1"} className="w-full h-48 object-cover"> */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold text-white">Project Name</h3>
-                                <p className="text-gray-400 mt-2">A brief description of the project and its purpose.</p>
-                                <div className="flex gap-2 mt-4">
-                                    <span className="text-xs bg-blue-600 text-white rounded-full px-3 py-1">React</span>
-                                    <span className="text-xs bg-green-600 text-white rounded-full px-3 py-1">Tailwind CSS</span>
-                                </div>
-                                <div className="mt-4 flex gap-4">
-                                    <a href="https://project-live-link.com" target="_blank" className="text-blue-400 hover:underline">Live Demo</a>
-                                    <a href="https://github.com/project-link" target="_blank" className="text-blue-400 hover:underline">GitHub</a>
-                                </div>
-                            </div>
-                    </div>
-                    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        {/* <Image src={"/project1-thumbnail.jpg"} width={50} alt={"Project 1"} className="w-full h-48 object-cover"> */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold text-white">Project Name</h3>
-                                <p className="text-gray-400 mt-2">A brief description of the project and its purpose.</p>
-                                <div className="flex gap-2 mt-4">
-                                    <span className="text-xs bg-blue-600 text-white rounded-full px-3 py-1">React</span>
-                                    <span className="text-xs bg-green-600 text-white rounded-full px-3 py-1">Tailwind CSS</span>
-                                </div>
-                                <div className="mt-4 flex gap-4">
-                                    <a href="https://project-live-link.com" target="_blank" className="text-blue-400 hover:underline">Live Demo</a>
-                                    <a href="https://github.com/project-link" target="_blank" className="text-blue-400 hover:underline">GitHub</a>
-                                </div>
-                            </div>
-                    </div>
-                    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        {/* <Image src={"/project1-thumbnail.jpg"} width={50} alt={"Project 1"} className="w-full h-48 object-cover"> */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold text-white">Project Name</h3>
-                                <p className="text-gray-400 mt-2">A brief description of the project and its purpose.</p>
-                                <div className="flex gap-2 mt-4">
-                                    <span className="text-xs bg-blue-600 text-white rounded-full px-3 py-1">React</span>
-                                    <span className="text-xs bg-green-600 text-white rounded-full px-3 py-1">Tailwind CSS</span>
-                                </div>
-                                <div className="mt-4 flex gap-4">
-                                    <a href="https://project-live-link.com" target="_blank" className="text-blue-400 hover:underline">Live Demo</a>
-                                    <a href="https://github.com/project-link" target="_blank" className="text-blue-400 hover:underline">GitHub</a>
-                                </div>
-                            </div>
-                    </div>
-                   
+                    ))}
                 </div>
             </div>
         </section>

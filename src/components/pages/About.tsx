@@ -4,7 +4,7 @@ import Image from 'next/image';
 import BackImage from '../../../public/Images/pattern.png';
 import MyPic from '../../../public/Images/Lakhan1.png';
 import { ResumeSvgIcons } from '@/SvgIcons/svgIcons';
-import data from '../../../public/data/data.json'
+import Projects from '../../../public/data/project.json'
 
 
 export const About: FC = () => {
@@ -73,7 +73,7 @@ export const About: FC = () => {
   useEffect(() => {
     let projectCount = 0;
     const projectInterval = setInterval(() => {
-      if (projectCount < data.projects.length) {
+      if (projectCount < Projects.projects.length) {
         projectCount++;
         setProjectCount(projectCount);
       }

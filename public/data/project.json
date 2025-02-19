@@ -1,0 +1,31 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "To-do List Application",
+            "backend" :"Node.js",
+            "frontend": "EJS",
+            "database": "MongoDB",
+            "screenshot": "/Images/ToDoList.png",
+            "description": "Developed a feature-rich To-Do List application using React for the frontend, styled with Tailwind CSS, and MongoDB as the database to store tasks."
+        },
+        {
+            "id": 2,
+            "name": "Task Management",
+            "backend" :"Node.js",
+            "frontend": "react.js",
+            "database": "MongoDB",
+            "screenshot": "/Images/taskManagement.png",
+            "description": "This is project 2."
+        },
+        {
+            "id": 3,
+            "name": "Resume Builder App",
+            "backend" :"Node.js",
+            "frontend": "Next.js",
+            "database": " MySQL",
+            "screenshot": "/Images/ResumeBuilderApp.png",
+            "description": "This Resume Builder App will allow users to create, edit, and download resumes dynamically."
+        }
+    ]
+}

@@ -1,28 +1,39 @@
-
+import React, { useState } from 'react'
 import { Header } from '@/components/pages/Header'
 import { About } from '@/components/pages/About'
 import { Sidebar } from '@/components/pages/Sidebar'
 import { Skills } from '@/components/pages/Skills'
 import { Projects } from '@/components/pages/Projects'
-
+import { Preloader } from '@/components/pages/Preloader'
 
 
 
 export default function Home() {
-  
 
- 
+  const [isEffectActive, setIsEffectActive] = useState(true);
 
+  const handleEffectFinish = () => {
+    setIsEffectActive(false); // Hide the effect
+  };
   return (
-    <main className='bg-slate-900 flex gap-6'>
-      <Sidebar />
-      <div className='main-containt w-full'>
-        <Header />
-        {/* <HomeContent /> */}
-        <About />
-        <Skills />
-        <Projects />
+    <>
+      {isEffectActive && <Preloader onFinish={handleEffectFinish} />}
+      <div
+        className={`transition-opacity duration-700 ${isEffectActive ? 'opacity-0.2' : 'opacity-100'
+          }`}
+      >
+        <main className='bg-slate-900 flex gap-6'>
+          <Sidebar />
+          <div className='main-containt w-full'>
+            <Header />
+            {/* <HomeContent /> */}
+            <About />
+            <Skills />
+            <Projects />
+          </div>
+        </main>
       </div>
-    </main>
+    </>
   )
 }
+
