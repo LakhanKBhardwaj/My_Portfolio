@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
-import projectData from '../../../public/data/project.json'
+import projectData from '../../../../public/data/project.json'
 import { ArrowUpRight } from '@phosphor-icons/react'
 import { useRouter } from 'next/router';
 import Link from 'next/link'

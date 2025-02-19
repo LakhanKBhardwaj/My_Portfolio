@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Header } from '@/components/pages/Header'
-import { About } from '@/components/pages/About'
-import { Sidebar } from '@/components/pages/Sidebar'
-import { Skills } from '@/components/pages/Skills'
-import { Projects } from '@/components/pages/Projects'
-import { Preloader } from '@/components/pages/Preloader'
+import { Header } from '@/components/shared/Header'
+import { About } from '@/components/pages/AboutSection/About'
+import { Sidebar } from '@/components/shared/Sidebar'
+import { Skills } from '@/components/pages/AboutSection/Skills'
+import { Projects } from '@/components/pages/AboutSection/Projects'
+import { Preloader } from '@/components/shared/Preloader'
 
 
 

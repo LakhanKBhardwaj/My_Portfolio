@@ -1,10 +1,10 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { Typed } from 'react-typed';
 import Image from 'next/image';
-import BackImage from '../../../public/Images/pattern.png';
-import MyPic from '../../../public/Images/Lakhan1.png';
+import BackImage from '../../../../public/Images/pattern.png';
+import MyPic from '../../../../public/Images/Lakhan1.png';
 import { ResumeSvgIcons } from '@/SvgIcons/svgIcons';
-import Projects from '../../../public/data/project.json'
+import Projects from '../../../../public/data/project.json'
 
 
 export const About: FC = () => {

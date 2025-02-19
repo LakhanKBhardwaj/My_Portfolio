@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { NextPage } from 'next';
-import { Header } from '@/components/pages/Header'
-import { Sidebar } from '@/components/pages/Sidebar'
-import { Preloader } from '@/components/pages/Preloader'
+import { Header } from '@/components/shared/Header'
+import { Sidebar } from '@/components/shared/Sidebar'
+import { Preloader } from '@/components/shared/Preloader'
 
 
 

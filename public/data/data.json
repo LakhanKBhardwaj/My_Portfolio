@@ -2,11 +2,9 @@
   "menu": [
      
       { "id": 1, "name": "About Me", "path": "/", "icon": "ph-user" },
-      { "id": 2, "name": "Skills", "path": "#skills", "icon": "ph-code" },
-      { "id": 3, "name": "Projects", "path": "#projects", "icon": "ph-shopping-bag" },
-      { "id": 4, "name": "Services", "path": "#services", "icon": "ph-briefcase" },
-      { "id": 5, "name": "Resume", "path": "#resume", "icon": "ph-read-cv-logo" },
-      { "id": 6, "name": "Contact", "path": "#contact", "icon": "ph-envelope" }
+      { "id": 2, "name": "Projects", "path": "/projectDetails", "icon": "ph-shopping-bag" },
+      { "id": 3, "name": "Resume", "path": "#resume", "icon": "ph-read-cv-logo" },
+      { "id": 4, "name": "Contact", "path": "#contact", "icon": "ph-envelope" }
   ],
 
   "socialMedia": [
