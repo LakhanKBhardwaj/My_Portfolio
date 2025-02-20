@@ -1,9 +1,10 @@
-import Image from 'next/image'
-import React, { FC, useRef, useState } from 'react'
-import MyPic from '../../../public/Images/myImage2.png'
-import Link from 'next/link'
-import data from '../../../public/data/data.json'
-import { Briefcase, Code, Envelope, FacebookLogo, House, InstagramLogo, LinkedinLogo, PaperPlaneTilt, ReadCvLogo, ShoppingBag, User, XLogo, } from '@phosphor-icons/react'
+import Image from 'next/image';
+import React, { FC, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+import MyPic from '../../../public/Images/myImage2.png';
+import Link from 'next/link';
+import data from '../../../public/data/data.json';
+import { Briefcase, Code, Envelope, FacebookLogo, House, InstagramLogo, LinkedinLogo, PaperPlaneTilt, ReadCvLogo, ShoppingBag, User, XLogo, } from '@phosphor-icons/react';
 
 
 // Create a mapping of icon strings to icon components
@@ -23,13 +24,7 @@ const iconMap = {
 
 export const Sidebar: FC = () => {
 
-    const [isActive, setIsActive] = useState("About Me");
-
-    const handelActiveMenu = (menuName: any) => {
-        setIsActive(menuName)
-    }
-
-
+    const router = useRouter();
     const [circleStyle, setCircleStyle] = useState({});
     const [animationClass, setAnimationClass] = useState("");
 
@@ -92,10 +87,9 @@ export const Sidebar: FC = () => {
                                     const MenuIconComponent = iconMap[menu.icon as keyof typeof iconMap];
 
                                     return (
-                                        <li key={menu.id} className={`rounded-lg ${isActive === menu.name ? 'bg-mediumTealGreen' : 'hover:bg-mediumTealGreen'}`}>
+                                        <li key={menu.id} className={`rounded-lg ${router.pathname === menu.path  ? 'bg-mediumTealGreen' : 'hover:bg-mediumTealGreen'}`}>
                                             <Link
                                                 href={menu.path}
-                                                onClick={() => handelActiveMenu(menu.name)}
                                                 className={`flex items-center gap-2 text-white text-[16px] leading-[130%] px-3 py-2`}
                                             >
                                                 {MenuIconComponent && <MenuIconComponent size={20} />}
