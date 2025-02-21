@@ -93,3 +93,15 @@
     color: var(--dark-gray);
     transform: rotate(45deg);
 }
+
+
+
+
+/* Footer section style */
+.footerContainer {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: calc(1.5rem * 0.5);
+    padding-left: calc(1.5rem * 0.5);
+}

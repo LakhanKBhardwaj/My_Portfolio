@@ -43,7 +43,6 @@ export const Projects: FC = () => {
                                 <Link href={{pathname: '/projectDetails',}}className='project-link flex items-center justify-center flex-shrink-0'>
                                     <ArrowUpRight size={20} className='link-icon' />
                                 </Link>
-                    
                             </div>
                         </div>
                     ))}

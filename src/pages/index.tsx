@@ -5,6 +5,7 @@ import { Sidebar } from '@/components/shared/Sidebar'
 import { Skills } from '@/components/pages/AboutSection/Skills'
 import { Projects } from '@/components/pages/AboutSection/Projects'
 import { Preloader } from '@/components/shared/Preloader'
+import { Footer } from '@/components/shared/Footer'
 
 
 
@@ -30,6 +31,7 @@ export default function Home() {
             <About />
             <Skills />
             <Projects />
+            <Footer />
           </div>
         </main>
       </div>
