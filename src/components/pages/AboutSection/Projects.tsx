@@ -33,14 +33,14 @@ export const Projects: FC = () => {
                                 <div>
                                     <span className="text-xl font-semibold text-white hover:text-mediumTealGreen project-title">{project.name}</span>
                                     <div className="flex flex-row">
-                                        <div className="flex [max-width:400px]:flex-wrap gap-2 mt-4 basis-128">
-                                            <span className="text-xs border text-white rounded-full px-3 py-1">{project.frontend}</span>
-                                            <span className="text-xs border text-white rounded-full px-3 py-1">{project.backend}</span>
-                                            <span className="text-xs border text-white rounded-full px-3 py-1">{project.database}</span>
+                                        <div className="flex flex-wrap gap-2 mt-4 basis-128">
+                                            <span className="text-xs border text-white rounded-full px-2 py-1">{project.Requirements?.frontend.technology}</span>
+                                            <span className="text-xs border text-white rounded-full px-2 py-1">{project.Requirements?.backend.technology}</span>
+                                            <span className="text-xs border text-white rounded-full px-2 py-1">{project.Requirements?.database.technology}</span>
                                         </div>
                                     </div>
                                 </div>
-                                <Link href={{pathname: '/projectDetails',}}className='project-link flex items-center justify-center flex-shrink-0'>
+                                <Link href={{pathname: '/projectDetails', query: { id: project.id }}} className='project-link flex items-center justify-center flex-shrink-0'>
                                     <ArrowUpRight size={20} className='link-icon' />
                                 </Link>
                             </div>

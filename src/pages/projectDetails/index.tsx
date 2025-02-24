@@ -3,6 +3,9 @@ import { NextPage } from 'next';
 import { Header } from '@/components/shared/Header'
 import { Sidebar } from '@/components/shared/Sidebar'
 import { Preloader } from '@/components/shared/Preloader'
+import { Project } from '@/components/pages/ProjecrDetails/ProjectDetails';
+import "aos/dist/aos.css";
+import { Footer } from '@/components/shared/Footer';
 
 
 
@@ -25,7 +28,8 @@ const ProjectDetails: NextPage = () => {
       <Sidebar />
       <div className='main-containt w-full'>
         <Header />
-        
+        <Project />
+        <Footer />
       </div>
     </main>
     </div>

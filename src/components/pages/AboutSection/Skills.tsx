@@ -1,6 +1,4 @@
 import React, { FC, useEffect, useState } from 'react'
-import AOS from 'aos';
-import "aos/dist/aos.css";
 import Image from 'next/image';
 import SkillData from '../../../../public/data/data.json'
 import { ResumeSvgIcons } from '@/SvgIcons/svgIcons';
@@ -38,21 +36,13 @@ export const Skills: FC = () => {
 
 
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: "ease-in-out",
-        });
-    }, []);
-
 
     return (
         <>
             <section id={'skills'} className='pt-[50px] md:pt-[60px] lg:pt-[120px] pb-[50px] md:pb-[60px] lg:pb-[120px]'>
                 <div className='container'>
                     <div className='flex gap-3 flex-wrap xl:flex-nowrap justify-between items-end pb-10 sm:pb-8 lg:pb-16'>
-                        <div data-aos="zoom-in" className='w-full xl:w-[75%]'>
+                        <div data-aos="fade-up" className='w-full xl:w-[75%]'>
                             <div className='flex items-center gap-2'>
                                 <div className='w-1 h-10 sm:h-14 lg:h-16 bg-mediumTealGreen'></div>
                                 <h1 className='text-4xl sm:text-5xl lg:text-[56px] font-semibold text-white ml-2'>What I Do</h1>

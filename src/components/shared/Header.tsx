@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import Link from 'next/link'
-import { Briefcase, Code, Envelope, House, ShoppingBag, User } from '@phosphor-icons/react'
+import { Briefcase, Code, Envelope, House, ShoppingBag, User, ReadCvLogo } from '@phosphor-icons/react'
 import data from '../../../public/data/data.json'
 
 
@@ -10,6 +10,7 @@ const iconMap = {
     "ph-user": User,
     "ph-code": Code,
     "ph-shopping-bag": ShoppingBag,
+    "ph-read-cv-logo": ReadCvLogo,
     "ph-briefcase": Briefcase,
     "ph-envelope": Envelope,
 };

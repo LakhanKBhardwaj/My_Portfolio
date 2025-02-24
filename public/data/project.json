@@ -2,17 +2,59 @@
     "projects": [
         {
             "id": 1,
-            "name": "To-do List Application",
-            "backend" :"Node.js",
-            "frontend": "EJS",
-            "database": "MongoDB",
-            "screenshot": "/Images/ToDoList.png",
-            "description": "Developed a feature-rich To-Do List application using React for the frontend, styled with Tailwind CSS, and MongoDB as the database to store tasks."
+            "name": "To-Do List Application",
+            "description": "A simple Todo list app where users can create, edit, delete, and view their to-do items efficiently.",
+            "service": "Web Development",
+            "Requirements": {
+                "frontend": {
+                    "technology": "Embedded JavaScript",
+                    "styling": "Tailwind CSS"
+                },
+                "backend": {
+                    "technology": "Node.js",
+                    "framework": "Express.js"
+                },
+                "database": {
+                    "technology": "MongoDB",
+                    "orm": "Mongoose (for schema management)"
+                },
+                "features": [
+                    "Add new to-do items",
+                    "Edit existing tasks",
+                    "Delete tasks",
+                    "View a list of all tasks",
+                    "Store tasks in MongoDB for persistence"
+                ]
+            },
+            "projectOverview": [
+                "The To-Do List App provides an easy-to-use interface where users can manage their daily tasks efficiently.", 
+                "The app allows users to create, modify, and remove tasks while storing them in a MongoDB database for data persistence.",
+                "The app ensures a seamless experience with a clean UI and smooth interactions."
+            ],
+            "Challenge": {
+                "problemStatement": "Users often struggle with organizing their tasks efficiently. Many existing solutions are either too complex or lack persistence.",
+                "keyChallenges": [
+                    "Implementing CRUD operations effectively, ",
+                    "Ensuring data is stored persistently in MongoDB, ",
+                    "Creating a responsive UI with CSS, ",
+                    "Handling form validation and user input efficiently."
+                ]
+            },
+            "approachAndSolution": {
+                "approach": "The project was built using Node.js and Express for the backend, while EJS and CSS were used for rendering the frontend. MongoDB was chosen for its flexibility in storing to-do items dynamically.",
+                "solution": [
+                    "Developed RESTful API endpoints for CRUD operations, ",
+                    "Integrated Mongoose for efficient schema management, ",
+                    "Implemented responsive UI using Tailwind CSS, ",
+                    "Ensured real-time updates and data persistence in MongoDB."
+                ]
+            },
+            "screenshot": "/Images/ToDoList.png"
         },
         {
             "id": 2,
             "name": "Task Management",
-            "backend" :"Node.js",
+            "backend": "Node.js",
             "frontend": "react.js",
             "database": "MongoDB",
             "screenshot": "/Images/taskManagement.png",
@@ -21,7 +63,7 @@
         {
             "id": 3,
             "name": "Resume Builder App",
-            "backend" :"Node.js",
+            "backend": "Node.js",
             "frontend": "Next.js",
             "database": " MySQL",
             "screenshot": "/Images/ResumeBuilderApp.png",
